@@ -1,0 +1,404 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+        <link rel="stylesheet" href="css/normalize.min.css">
+        <link rel="stylesheet" href="css/main.css">
+
+        <script src="js/vendor/modernizr-2.8.3.min.js"></script>
+        <style type="text/css">
+            * {
+            font-family: Consolas, "Andale Mono WT", "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Liberation Mono", "Nimbus Mono L", Monaco, "Courier New", Courier, monospace;
+            }
+
+            /* Variables */
+            /* */
+            body {
+                /*background: #ff9800;
+                color: #fff;*/
+            }
+
+            .card {
+                /*position: absolute;
+                top: 30%;
+                left: 40%;*/
+                position: fixed;
+                left: -358px;
+                top:28px;
+                color:#fff;
+                display: inline-block;
+                width: 350px;
+                height: 200px;
+                background: #1c1c1c;
+                box-shadow: 4px 8px 16px 0 rgba(0, 0, 0, 0.3);
+            }
+            .mostrar{                
+                left: 0px;
+            }
+            .card .card-info {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                width: 100%;
+                padding-left: 70px;
+            }
+            .card .text {
+                padding-left: 20px;
+                margin: 0;
+            }
+            .card .back {
+                font-size: 15px;
+            }
+            .card .blue {
+                color: #29b6f6;
+            }
+            .card .green {
+                color: #9ccc65;
+            }
+            .card .purple {
+                color: #ba68c8;
+            }
+            .card .red {
+                color: #ef5350;
+            }
+
+            a {
+                text-decoration: none;
+            }
+            html{
+                height: 100%;
+            }
+            body {
+                background: -webkit-linear-gradient(bottom, #bb164a, #ff2e54, #ff8888);
+                background-repeat: no-repeat;
+            }
+
+            #modal {
+                font-family: "Raleway", sans-serif;
+                background: #ebebeb;
+                border-radius: 8px;
+                box-shadow: 1px 2px 8px rgba(0, 0, 0, 0.65);
+                /*margin: 6rem auto 8.1rem auto;*/
+                width: 348px;
+            }
+            #modal-content {
+                padding: 24px 5px;
+            }
+            #modal-title {
+                font-family: "Raleway Thin", sans-serif;
+                letter-spacing: 4px;
+                padding-bottom: 23px;
+                padding-top: 13px;
+                text-align: center;
+            }
+           
+            .underline-title {
+                background: -webkit-linear-gradient(right, #ff4e4e, #a61e50);
+                height: 2px;
+                margin: -1.1rem auto 0 auto;
+                width: 89px;
+            }
+
+            /*Mios*/
+
+            .card button{
+                background: #1c1c1c;
+                color: #ebebeb;
+                width: 50px;
+                height: 60px;
+                position: absolute;
+                right: -50px;
+                border: none;
+                cursor: pointer;
+            }
+            .card button:hover{
+                color: #1c1c1c;
+                background: #ebebeb;
+            }
+
+            pre{
+                background: rgb(255, 0, 85);
+                color: #ebebeb;
+                text-align: right;
+                padding-right: 10px;
+                height: 100px;
+            }
+            ul li{
+                list-style: none;
+            }
+            ul li {
+                margin-bottom: 10px;
+            }
+        </style>
+    </head>
+    <body>
+        <!--[if lt IE 8]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+            <![endif]-->
+        <!--h1 id="titulo">Construcción de Software 2018-02</h1-->
+        <!--
+            <div class="wrapper_adsense">
+                <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                
+                <ins class="adsbygoogle"
+                style="display:inline-block;width:728px;height:90px"
+                data-ad-client="ca-pub-2077068182880677"
+                data-ad-slot="3845033214"></ins>
+                <script>
+                    (adsbygoogle = window.adsbygoogle || []).push({});
+                </script>
+            </div>
+        -->
+        <div class="wrapper clearfix">  
+            
+            <!--
+                
+                 __     __ ____    ____   __    __  __ _  ____ 
+                (  )   / /( __ \  (  _ \ /  \  /  \(  / )/ ___)
+                 )(   ( (  (__ (   ) _ ((  O )(  O ))  ( \___ \
+                (__)   \_\(____/  (____/ \__/  \__/(__\_)(____/
+                 
+                 Crear o Morir Enero
+                 Los innovadores Febrero
+                 Current book: Las claves del éxito de toyota (Marzo - abril)
+                 
+                 Frase: “Talk is cheap. Show me the code.”
+                -->
+            
+            <div class="card" id="acerca_de">
+                <button id="abrir_acerca_de">></button>
+                <div class="card-info back"><span class="purple">const</span> aboutMe <span class="blue">=</span> {<br/><div class="text">
+                <span class="red">name<span class="blue">:</span></span> <span class="green">'Andrés Bedoya Tobón'</span>,<br/>
+                <span class="red">email<span class="blue">:</span></span> <span class="green">'andres.bedoya@upb.edu.co'</span>,<br/>
+                <span class="red">position<span class="blue">:</span></span> <span class="green">'Profesor'</span>,<br/>
+                <span class="red">website<span class="blue">:</span></span> <span class="green">'www.holamundo.co'</span></div>
+                };</div>
+                <!-- Tomado de: https://codepen.io/erykvest/pen/RdvpqE -->
+            </div>
+
+            <pre>
+            __  ____ _  ___ __ _   _ __ __ _ _ __   __ _ 
+            \ \/ / _` |/ __/ _` | | '__/ _` | '_ \ / _` |
+             >  < (_| | (_| (_| | | | | (_| | | | | (_| |
+            /_/\_\__,_|\___\__,_| |_|  \__,_|_| |_|\__,_|
+            
+            </pre>                                             
+
+            <div id="modal">
+                <div id="modal-content">
+                    <div id="modal-title">
+                        <img src="img/1f4d5.png" alt="">
+                        <h2>Cursos </h2>
+                        <div class="underline-title"></div>
+                    </div>
+                    <div>
+                        <ul>
+                            <li> <a href="https://www.youtube.com/playlist?list=PLQ1ShaTNqthIRnJGu7x0bER60wiWWAymZ" target="_blank">
+                                Fundamentos de programación <br>
+                                (Unity 3D)
+                                </a>
+                            </li>
+                            <li><a href="https://www.youtube.com/watch?v=7RpzNQerXug&list=PLQ1ShaTNqthIjNVc1ll63PkFhWK7odZly" target="_blank">
+                                Programación y diseño <br> orientado a objetos <br> 
+                                (Unity 3D)
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.youtube.com/playlist?list=PLQ1ShaTNqthL1w5LSw5l7CbjCu5xiKQsA" target="_blank">
+                                Introducción a JAVA
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Fundamentos de Programación -->
+            <!--
+                <h2>Datos personales</h2>
+                <ul>
+                    <li>Andrés Bedoya Tobón</li>
+                    <li>e-mail:andres.bedoya@upb.edu.co</li>
+                    <li>celular:3003298265</li>
+                </ul>
+            -->
+            <!--br>
+                <h2>Evaluación curso</h2>
+                <ul>
+                    <li>Examen diagnostico (perfil)</li>
+                    <li>Seguimiento proyecto</li>
+                    <li>Exposición proyecto</li>
+                </ul>
+                
+                <h2>Grupo de whatsApp</h2>
+                <p>Para ingresar al grupo por favor escanear el siguiente código QR.</p>
+                <img src="img/qr.jpg" width="20%" height="20%" />
+                <h2>Tercera Sesión- Sabado 22 de Septiembre</h2>
+                <ol>
+                    <li>Metodologías agiles y herramientas</li>
+                    <li>Code Review</li>
+                </ol>
+                <div style="width:600px;height:300px;overflow-y:auto;">
+                    function myFunction() {
+                        var hoja = SpreadsheetApp.getActiveSpreadsheet().getSheetByName(&#x22;Prueba&#x22;);
+                        var celdas = hoja.getRange(1,1,100,2);
+                        for(var i=1;i&#x3C;=100;i++)
+                        {
+                            celdas.getCell(i, 1).setValue(i);
+                            celdas.getCell(i, 2).setValue(i*i);
+                            celdas.getCell(i, 1).setBackground(&#x22;#ff0000&#x22;);
+                        }
+                        /*celdas.getCell(1, 2).setValue(2);
+                        celdas.getCell(1, 3).setValue(3);
+                        celdas.getCell(1, 4).setValue(4);
+                        
+                        
+                        celdas.getCell(2, 1).setValue(5);
+                        celdas.getCell(2, 2).setValue(6);
+                        celdas.getCell(2, 3).setValue(7);
+                        celdas.getCell(2, 4).setValue(8);*/
+                    }
+                    
+                    function test(){
+                        GmailApp.sendEmail(&#x22;lasmovies@gmail.com&#x22;, &#x22;code review&#x22;, &#x22;&#x22;, {htmlBody:&#x22;&#x3C;table border=&#x27;1&#x27;&#x3E;&#x3C;tr&#x3E;&#x3C;td&#x3E;hola&#x3C;/td&#x3E;&#x3C;td&#x3E;mundo&#x3C;/td&#x3E;&#x3C;/tr&#x3E;&#x3C;/table&#x3E;&#x22;});
+                    }
+                    
+                    function desordenador() {
+                        var contador_estudiantes = 0;
+                        var hoja = SpreadsheetApp.getActiveSpreadsheet().getSheetByName(&#x22;SillaPark&#x22;);  
+                        var filas = 4, columnas = 9;
+                        var celdas = hoja.getRange(4, 3, filas, columnas);
+                        var celda,color;
+                        shuffle(estudiantes);
+                        
+                        
+                        for(var i= 1; i&#x3C;=filas; i++)
+                        {
+                            for(var j= 1; j&#x3C;=columnas; j++){
+                                celda = celdas.getCell(i, j);
+                                color = getRandomColor();
+                                celda.setBackground(&#x27;&#x27;+color);
+                                celda.setWrap(true);
+                                celda.setFontColor(invertColor(color,true));
+                                if(contador_estudiantes&#x3C;estudiantes.length){
+                                    celdas.getCell(i,j).setValue(estudiantes[contador_estudiantes++]);
+                                }
+                            }
+                        }
+                        
+                    }
+                </div>
+                <h2>Segunda Sesión- Sabado 14 de Septiembre</h2>
+                <ol>
+                    <li>Seguimiento proyectos (SCRUM)</li>
+                    <li>Fundamentos de javascript</li>
+                    <li>Ejercicios (scaffolding - boilerplate)</li>
+                    <li>Almuerzo</li>
+                    <li>Flujo de trabajo</li>
+                    <li>Patrones</li>
+                    <li>
+                        <ul>
+                            <li>MVC</li>
+                            <li>Observer</li>
+                            <li>Singleton</li>
+                            <li>Pooling Objetos</li>
+                        </ul>
+                    </li>
+                </ol!-->
+             <!--
+                 <h2>Presentaciones</h2>
+                 <div class="materia" onclick="location.href='repositorio/';">
+                    <p>Repositorio</p>
+                </div>
+                <div class="materia" onclick="location.href='html_y_css/';">
+                    <p>HTML y CSS</p>
+                </div>
+                <div class="materia" onclick="location.href='pos_y_typo/';">
+                    <p>Posicionamiento y tipografía</p>
+                </div>
+                <div class="materia" onclick="location.href='sass/';">
+                    <p>Tu hoja de estilos en un SASS por tres</p>
+                </div>
+                <div class="materia" onclick="location.href='javascript/';">
+                    <p>Javascript</p>
+                </div>
+                <br>
+                
+                <h2>Temas de apoyo</h2>
+                <div class="materia" onclick="location.href='https://www.youtube.com/watch?v=lUOa1tSThZU';">
+                    <p>Automatización de tareas</p>
+                </div>
+                <div class="materia" onclick="location.href='https://www.youtube.com/watch?v=BgpBg7UJttg';">
+                    <p>Almacenamiento desconectado (LocalStorage)</p>
+                </div>
+                <div class="materia" onclick="location.href='https://gruntjs.com/';">
+                    <p>The JavaScript Task Runner</p>
+                </div>
+                <div class="materia" onclick="location.href='http://yeoman.io/';">
+                    <p>The web's scaffolding tool for modern webapps</p>
+                </div>
+                <div class="materia" onclick="location.href='https://sass-lang.com/';">
+                    <p>CSS with superpowers</p>
+                </div>
+                <div class="materia" onclick="location.href='https://webpack.js.org/';">
+                    <p>Bundle your assets</p>
+                </div>
+                <div class="materia" onclick="location.href='scrum/';">
+                    <p>SCRUM</p>
+                </div>
+                
+                
+                <div class="materia" onclick="location.href='html_y_css/';">
+                    <p>HTML y CSS</p>
+                </div>
+                <div class="materia" onclick="location.href='pos_y_typo/';">
+                    <p>Posicionamiento y tipografía</p>
+                </div>
+                <div class="materia" onclick="location.href='sprites/';">
+                    <p>Usando imágenes</p>
+                </div>
+                <div class="materia" onclick="location.href='javascript/';">
+                    <p>Javascript</p>
+                </div>
+                <div class="materia" onclick="location.href='scrum/';">
+                    <p>SCRUM</p>
+                </div>
+                
+                Anexo
+                <div class="materia" onclick="location.href='repositorio/';">
+                    <p>Repositorio</p>
+                </div>
+                <div class="materia" onclick="location.href='sass/';">
+                    <p>Tu hoja de estilos en un SASS por tres</p>
+                </div> -->
+        </div>
+
+        <script>
+            function abrir(event)
+            {
+                acerca_de.className = "card mostrar slideInLeft animated";
+                abrir_acerca_de.innerHTML = '<';
+                abrir_acerca_de.removeEventListener("click",abrir);
+                abrir_acerca_de.addEventListener("click",cerrar);
+
+            }
+            function cerrar(event)
+            {
+                acerca_de.className = "card slideInRight animated";
+                abrir_acerca_de.innerHTML = '>';
+                abrir_acerca_de.removeEventListener("click",cerrar);
+                abrir_acerca_de.addEventListener("click",abrir);
+
+            }
+            abrir_acerca_de.addEventListener("click",abrir);
+        </script>
+        <script src="js/main.js"></script>
+    </body>
+</html>
