@@ -8,21 +8,20 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
-        <link rel="stylesheet" href="css/normalize.min.css">
-        <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="css/normalize.css">
 
         <script src="js/vendor/modernizr-2.8.3.min.js"></script>
         <style type="text/css">
             * {
-            font-family: Consolas, "Andale Mono WT", "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Liberation Mono", "Nimbus Mono L", Monaco, "Courier New", Courier, monospace;
+                font-family: Consolas, "Andale Mono WT", "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Liberation Mono", "Nimbus Mono L", Monaco, "Courier New", Courier, monospace;
             }
-
-            /* Variables */
-            /* */
-            body {
-                /*background: #ff9800;
-                color: #fff;*/
+            body{
+                background: -webkit-linear-gradient(bottom, #bb164a, #ff2e54, #ff8888);
+                background-repeat: no-repeat;
             }
+            /* hack para el background https://css-tricks.com/forums/topic/background-image-height-problem-not-fitting-to-the-screen/ */
+            html, body {min-height: 100%;}
+            body {background-size: cover;}
 
             .card {
                 /*position: absolute;
@@ -42,6 +41,7 @@
                 left: 0px;
             }
             .card .card-info {
+                text-align: left;
                 position: absolute;
                 top: 50%;
                 left: 50%;
@@ -72,26 +72,23 @@
             a {
                 text-decoration: none;
             }
-            html{
-                height: 100%;
-            }
-            body {
-                background: -webkit-linear-gradient(bottom, #bb164a, #ff2e54, #ff8888);
-                background-repeat: no-repeat;
-            }
 
-            #modal {
+            .card_info {
+                position: relative;
                 font-family: "Raleway", sans-serif;
                 background: #ebebeb;
                 border-radius: 8px;
                 box-shadow: 1px 2px 8px rgba(0, 0, 0, 0.65);
-                /*margin: 6rem auto 8.1rem auto;*/
                 width: 348px;
+                height: 350px;
+                display: inline-block;  
+                vertical-align: bottom; /* https://blog.mozilla.org/webdev/2009/02/20/cross-browser-inline-block/ */              
+                margin-bottom: 10px;
             }
-            #modal-content {
+            .modal-content {
                 padding: 24px 5px;
             }
-            #modal-title {
+            .modal-title {
                 font-family: "Raleway Thin", sans-serif;
                 letter-spacing: 4px;
                 padding-bottom: 23px;
@@ -107,6 +104,9 @@
             }
 
             /*Mios*/
+            .wrapper{
+                text-align: center;
+            }
 
             .card button{
                 background: #1c1c1c;
@@ -132,10 +132,12 @@
             }
             ul li{
                 list-style: none;
+                text-align: left
             }
             ul li {
                 margin-bottom: 10px;
             }
+           
         </style>
     </head>
     <body>
@@ -186,14 +188,14 @@
             <pre>
             __  ____ _  ___ __ _   _ __ __ _ _ __   __ _ 
             \ \/ / _` |/ __/ _` | | '__/ _` | '_ \ / _` |
-             >  < (_| | (_| (_| | | | | (_| | | | | (_| |
+            &gt;  &lt; (_| | (_| (_| | | | | (_| | | | | (_| |
             /_/\_\__,_|\___\__,_| |_|  \__,_|_| |_|\__,_|
             
             </pre>                                             
 
-            <div id="modal">
-                <div id="modal-content">
-                    <div id="modal-title">
+            <div class="card_info">
+                <div class="modal-content">
+                    <div class="modal-title">
                         <img src="img/1f4d5.png" alt="">
                         <h2>Cursos </h2>
                         <div class="underline-title"></div>
@@ -219,7 +221,33 @@
                     </div>
                 </div>
             </div>
-
+            <!-- -->
+            <div class="card_info">
+                <div class="modal-content">
+                    <div class="modal-title">
+                        <img src="img/2764.png" alt="">
+                        <h2>Programming love </h2>
+                        <div class="underline-title"></div>
+                    </div>
+                    <div>
+                        <ul>
+                            <li> <a href="https://codepen.io/xaca/" target="_blank">
+                                codepen.io
+                                </a>
+                            </li>
+                            <li><a href="https://github.com/xaca/" target="_blank">
+                                github
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://bitbucket.org/ingenieriaupb/" target="_blank">
+                                bitbucket
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
             <!-- Fundamentos de Programación -->
             <!--
                 <h2>Datos personales</h2>
