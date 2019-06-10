@@ -9,137 +9,9 @@
         
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
         <link rel="stylesheet" href="css/normalize.css">
-        
+        <link rel="stylesheet" href="css/main.css">
         <script src="js/vendor/modernizr-2.8.3.min.js"></script>
-        <style type="text/css">
-            * {
-                font-family: Consolas, "Andale Mono WT", "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Liberation Mono", "Nimbus Mono L", Monaco, "Courier New", Courier, monospace;
-            }
-            body{
-                background: -webkit-linear-gradient(bottom, #bb164a, #ff2e54, #ff8888);
-                background-repeat: no-repeat;
-            }
-            /* hack para el background https://css-tricks.com/forums/topic/background-image-height-problem-not-fitting-to-the-screen/ */
-            html, body {min-height: 100%;}
-            body {background-size: cover;}
-            
-            .card {
-                /*position: absolute;
-                top: 30%;
-                left: 40%;*/
-                position: fixed;
-                left: -358px;
-                top:28px;
-                color:#fff;
-                display: inline-block;
-                width: 350px;
-                height: 200px;
-                background: #1c1c1c;
-                box-shadow: 4px 8px 16px 0 rgba(0, 0, 0, 0.3);
-                z-index: 1;
-            }
-            .mostrar{                
-                left: 0px;
-            }
-            .card .card-info {
-                text-align: left;
-                position: absolute;
-                top: 50%;
-                left: 50%;
-                transform: translate(-50%, -50%);
-                width: 100%;
-                padding-left: 70px;
-            }
-            .card .text {
-                padding-left: 20px;
-                margin: 0;
-            }
-            .card .back {
-                font-size: 15px;
-            }
-            .card .blue {
-                color: #29b6f6;
-            }
-            .card .green {
-                color: #9ccc65;
-            }
-            .card .purple {
-                color: #ba68c8;
-            }
-            .card .red {
-                color: #ef5350;
-            }
-
-            a {
-                text-decoration: none;
-            }
-
-            .card_info {
-                position: relative;
-                font-family: "Raleway", sans-serif;
-                background: #ebebeb;
-                border-radius: 8px;
-                box-shadow: 1px 2px 8px rgba(0, 0, 0, 0.65);
-                width: 348px;
-                height: 350px;
-                display: inline-block;  
-                vertical-align: bottom; /* https://blog.mozilla.org/webdev/2009/02/20/cross-browser-inline-block/ */              
-                margin-bottom: 10px;
-            }
-            .modal-content {
-                padding: 24px 5px;
-            }
-            .modal-title {
-                font-family: "Raleway Thin", sans-serif;
-                letter-spacing: 4px;
-                padding-bottom: 23px;
-                padding-top: 13px;
-                text-align: center;
-            }
-           
-            .underline-title {
-                background: -webkit-linear-gradient(right, #ff4e4e, #a61e50);
-                height: 2px;
-                margin: -1.1rem auto 0 auto;
-                width: 89px;
-            }
-
-            /*Mios*/
-            .wrapper{
-                text-align: center;
-            }
-
-            .card button{
-                background: #1c1c1c;
-                color: #ebebeb;
-                width: 50px;
-                height: 60px;
-                position: absolute;
-                right: -50px;
-                border: none;
-                cursor: pointer;
-            }
-            .card button:hover{
-                color: #1c1c1c;
-                background: #ebebeb;
-            }
-
-            pre{
-                background: rgb(255, 0, 85);
-                color: #ebebeb;
-                text-align: right;
-                padding-right: 10px;
-                height: 100px;
-            }
-            ul li{
-                list-style: none;
-                text-align: left
-            }
-            ul li {
-                margin-bottom: 10px;
-            }
-           
-        </style>
+        
     </head>
     <body>
         <!--[if lt IE 8]>
@@ -168,10 +40,11 @@
                  )(   ( (  (__ (   ) _ ((  O )(  O ))  ( \___ \
                 (__)   \_\(____/  (____/ \__/  \__/(__\_)(____/
                  
+                 2019
                  Crear o Morir Enero
                  Los innovadores Febrero
-                 Current book: Las claves del éxito de toyota (Marzo - abril)
-                 
+                 Las claves del éxito de toyota (Marzo - abril)
+                 Actual: The power of habit (Mayo - Junio)
                  Frase: “Talk is cheap. Show me the code.”
                 -->
             
@@ -409,25 +282,6 @@
                 </div> -->
         </div>
 
-        <script>
-            function abrir(event)
-            {
-                acerca_de.className = "card mostrar slideInLeft animated";
-                abrir_acerca_de.innerHTML = '<';
-                abrir_acerca_de.removeEventListener("click",abrir);
-                abrir_acerca_de.addEventListener("click",cerrar);
-
-            }
-            function cerrar(event)
-            {
-                acerca_de.className = "card slideInRight animated";
-                abrir_acerca_de.innerHTML = '>';
-                abrir_acerca_de.removeEventListener("click",cerrar);
-                abrir_acerca_de.addEventListener("click",abrir);
-
-            }
-            abrir_acerca_de.addEventListener("click",abrir);
-        </script>
         <script src="js/main.js"></script>
     </body>
 </html>
