@@ -8,7 +8,13 @@ body{
 /* hack para el background https://css-tricks.com/forums/topic/background-image-height-problem-not-fitting-to-the-screen/ */
 html, body {min-height: 100%;}
 body {background-size: cover;}
-
+a{color:lemonchiffon;}
+li a{color:maroon;}
+#destacado,#retos_batalla{
+    width:70%;
+    text-align: left;
+    margin:50px auto;
+}
 .card {
     /*position: absolute;
     top: 30%;
