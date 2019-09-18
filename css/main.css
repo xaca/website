@@ -12,7 +12,12 @@ h1{
     width:250px;
     margin:20px auto;
 }
-a{color:lemonchiffon;}
+a{
+    color:lemonchiffon;    
+}
+a:hover{
+    color:purple;
+}
 li a{color:maroon;}
 #destacado,#retos_batalla{
     width:70%;
@@ -22,12 +27,13 @@ li a{color:maroon;}
 #destacado_home{
     width:70%;
     text-align: center;
-    margin:15px auto;
+    margin:55px auto;
     font-size: 32px;
      
 }
 #destacado_home a{
     color:#1c1c1c; 
+    text-decoration:midnightblue;
 }
 .card {
     /*position: absolute;
@@ -74,10 +80,6 @@ li a{color:maroon;}
 }
 .card .red {
     color: #ef5350;
-}
-
-a {
-    text-decoration: none;
 }
 
 .card_info {
