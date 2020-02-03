@@ -146,3 +146,30 @@ ul li{
 ul li {
     margin-bottom: 10px;
 }
+.circular{
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    background-image: url(../img/yo_02.jpg);
+    background-size: cover;
+}
+.cabezote_header{
+    position: relative;
+    width: 302px;
+    margin: 0 auto;
+}
+.cabezote_header h2{
+    position: absolute;
+    top: 4px;
+    text-align: right;
+    font-size: 58px;
+    line-height: 46px;
+    font-family: sans-serif;
+    color:#ff8485;
+}
+.img_link{
+    text-decoration: none;
+}
+.cabezote_links{
+    text-align: center;
+}
