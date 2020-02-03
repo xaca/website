@@ -5,9 +5,16 @@ body{
     background: -webkit-linear-gradient(bottom, #bb164a, #ff2e54, #ff8888);
     background-repeat: no-repeat;
 }
-/* hack para el background https://css-tricks.com/forums/topic/background-image-height-problem-not-fitting-to-the-screen/ */
+/* hack para el background https://css-tricks.com/forums/topic/background-image-height-problem-not-fitting-to-the-screen/ 
 html, body {min-height: 100%;}
 body {background-size: cover;}
+*/
+body{
+    height: 100%;
+    margin: 0;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
 h1{
     width:250px;
     margin:20px auto;
